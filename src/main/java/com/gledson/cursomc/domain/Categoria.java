@@ -1,13 +1,16 @@
 package com.gledson.cursomc.domain;
-
+import javax.persistence.*;
 import java.io.Serializable;
 
+@Entity
 public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String nome;
 	
+	private String nome;
 	public Categoria() {}
 
 	public Categoria(Integer id, String nome) {
