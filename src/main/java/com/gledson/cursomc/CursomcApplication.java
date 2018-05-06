@@ -102,7 +102,7 @@ public class CursomcApplication implements CommandLineRunner{
 		cli1.getEnderecos().addAll(Arrays.asList(end1));
 		
 		cli2.getTelefones().addAll(Arrays.asList("9993-2258"));
-		cli2.getEnderecos().addAll(Arrays.asList(end2));
+		cli2.getEnderecos().addAll(Arrays.asList(end2, end3, end4));
 		
 		cli3.getTelefones().addAll(Arrays.asList("99955-6545"));
 		cli3.getEnderecos().addAll(Arrays.asList(end3));
@@ -110,12 +110,14 @@ public class CursomcApplication implements CommandLineRunner{
 		cli4.getTelefones().addAll(Arrays.asList("2214-6587", "3654-4587"));
 		cli4.getEnderecos().addAll(Arrays.asList(end4));
 		
+	
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
 		estadoRepository.saveAll(Arrays.asList(est1, est2, est3, est4));
 		cidadeRepository.saveAll(Arrays.asList(cid1, cid2, cid3, cid4, cid5, cid6, cid7));
 		clienteReposity.saveAll(Arrays.asList(cli1, cli2, cli3, cli4));
 		enderecoRepository.saveAll(Arrays.asList(end1, end2, end3, end4));
+	
 	
 		
 	}
